@@ -7,11 +7,11 @@ Vec3<T>::Vec3()
 }
 
 template <typename T>
-Vec3<T>::Vec3(T _x, T _y, T _z)
+Vec3<T>::Vec3(T x, T y, T z)
 {
-	x = _x;
-	y = _y;
-	z = _z;
+	this->x = x;
+	this->y = y;
+	this->z = z;
 }
 
 template <typename T>
@@ -36,31 +36,31 @@ T Vec3<T>::getZ()
 }
 
 template <typename T>
-void const Vec3<T>::setX(T _x)
+void const Vec3<T>::setX(T x)
 {
-	x = _x;
+	this->x = x;
 }
 template <typename T>
-void const Vec3<T>::setY(T _y)
+void const Vec3<T>::setY(T y)
 {
-	y = _y;
+	this->y = y;
 }
 template <typename T>
-void const Vec3<T>::setZ(T _z)
+void const Vec3<T>::setZ(T z)
 {
-	z = _z;
+	this->z = z;
 }
 
 template <typename T>
-Vec3<T> Vec3<T>::operator+( Vec3 &newvec3)
+Vec3<T> Vec3<T>::operator+(const Vec3 &newvec3)
 {
-	return Vec3<T>(x + newvec3.x, y + newvec3.y, z + newvec3.z);
+	return Vec3(x + newvec3.x, y + newvec3.y, z + newvec3.z);
 }
 
 template <typename T>
 Vec3<T> Vec3<T>::operator-(const Vec3 &newvec3)
 {
-	return Vec3<T>(x - newvec3.x, y - newvec3.y, z - newvec3.z);
+	return Vec3(x - newvec3.x, y - newvec3.y, z - newvec3.z);
 }
 
 template <typename T>
@@ -120,5 +120,5 @@ bool Vec3<T>::is_zero()
 template <typename T>
 const T Vec3<T>::distance_to(const Vec3 &newvec3)
 {
-	T dis = sqrt((x - newvec3.x)*(x - newvec3.x) + (y - newvec3.y)*(y - newvec3.y) + (z - newvec3.z)*(z - newvec3.z));
+	return sqrt((x - newvec3.x)*(x - newvec3.x) + (y - newvec3.y)*(y - newvec3.y) + (z - newvec3.z)*(z - newvec3.z));
 }
