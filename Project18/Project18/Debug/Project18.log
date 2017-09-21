@@ -1,18 +1,4 @@
 ﻿  Vec3.cpp
-c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(15): error C2244: 'Vec3<T>::Vec3': unable to match function definition to an existing declaration
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(10): note: see declaration of 'Vec3<T>::Vec3'
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(15): note: definition
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(15): note: 'Vec3<T>::Vec3(T,T,T)'
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(15): note: existing declarations
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(15): note: 'Vec3<T>::Vec3(double,double,double)'
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(15): note: 'Vec3<T>::Vec3(void)'
-c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(58): error C2244: 'Vec3<T>::operator +': unable to match function definition to an existing declaration
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(55): note: see declaration of 'Vec3<T>::operator +'
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(58): note: definition
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(58): note: 'Vec3<T> Vec3<T>::operator +(Vec3<T> &)'
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(58): note: existing declarations
-  c:\users\ivan\documents\visual studio 2015\projects\project18\project18\vec3.cpp(58): note: 'Vec3<T> Vec3<T>::operator +(const Vec3<T> &)'
-  Generating Code...
-  Compiling...
+c:\users\ivandv\documents\github\game-developement-projects\project18\project18\vec3.cpp : fatal error C1041: cannot open program database 'C:\Users\ivandv\Documents\GitHub\Game-Developement-Projects\Project18\Project18\Debug\vc140.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
   main.cpp
   Generating Code...

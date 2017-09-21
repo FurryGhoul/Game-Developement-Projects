@@ -118,7 +118,7 @@ bool Vec3<T>::is_zero()
 }
 
 template <typename T>
-const double Vec3<T>::distance_to(const Vec3 &newvec3)
+const T Vec3<T>::distance_to(const Vec3 &newvec3)
 {
-	double dis = sqrt((x - newvec3.x)*(x - newvec3.x) + (y - newvec3.y)*(y - newvec3.y) + (z - newvec3.z)*(z - newvec3.z));
+	T dis = sqrt((x - newvec3.x)*(x - newvec3.x) + (y - newvec3.y)*(y - newvec3.y) + (z - newvec3.z)*(z - newvec3.z));
 }

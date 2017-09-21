@@ -3,10 +3,10 @@ template <typename T>
 class Vec3
 {
 private:
-	double x, y, z;
+	T x, y, z;
 public:
 	Vec3();
-	Vec3(double _x, double _y, double _z);
+	Vec3(T _x, T _y, T _z);
 	~Vec3();
 
 	T getX();
@@ -27,7 +27,7 @@ public:
 	void normalize();
 	void zero();
 	bool is_zero();
-	const double distance_to(const Vec3 &newvec3);
+	const T distance_to(const Vec3 &newvec3);
 
 };
 
