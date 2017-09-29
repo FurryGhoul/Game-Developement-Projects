@@ -85,7 +85,7 @@ public:
 
 private:
 
-	xml_node fill_map(xml_document &)const;
+	xml_node fill_map(xml_document &);
 
 public:
 

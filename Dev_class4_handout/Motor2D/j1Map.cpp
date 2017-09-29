@@ -85,10 +85,16 @@ bool j1Map::Load(const char* file_name)
 	return ret;
 }
 
-xml_node j1Map::fill_map(xml_document &map_file) const
+xml_node j1Map::fill_map(xml_document &map_file) 
 {
 	xml_node iterator = map_file.first_child();
 	xml_parse_result result = map_file.load_file("hello.tmx");
 	first_map.height = iterator.attribute("height").as_uint();
+	first_map.nextobjectid = iterator.attribute("nextobjectid").as_int();
+	first_map.tileheight = iterator.attribute("tileheight").as_uint();
+	first_map.tilewidth = iterator.attribute("tilewidth").as_uint();
+	first_map.version = iterator.attribute("version").as_float();
+	first_map.width = iterator.attribute("width").as_uint();
+	
 	return xml_node();
 }
