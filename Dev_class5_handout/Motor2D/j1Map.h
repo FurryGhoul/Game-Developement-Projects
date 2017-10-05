@@ -17,11 +17,10 @@ struct MapLayer
 	uint size = 0;
 
 	
-	~MapLayer() {delete[] data};
+	~MapLayer() { delete[] data; }
 };
 	// TODO 6: Short function to get the value of x,y
-
-
+inline uint Get(int x, int y) const {};
 
 // ----------------------------------------------------
 struct TileSet

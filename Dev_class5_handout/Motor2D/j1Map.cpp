@@ -34,7 +34,13 @@ void j1Map::Draw()
 		return;
 
 	// TODO 5: Prepare the loop to draw all tilesets + Blit
-
+	for (int i = 0; i < data.width; ++i)
+	{
+		for (int j = 0; j < data.height; ++j)
+		{
+			App->render->Blit(data.tilesets[0]->texture, data.tile_width*i, data.tile_height*j);
+		}
+	}
 		// TODO 9: Complete the draw function
 
 }
@@ -145,6 +151,7 @@ bool j1Map::Load(const char* file_name)
 		{
 			ret = LoadLayer(layers, set);
 		}
+		data.maplayers.add(set);
 	}
 
 	if(ret == true)
