@@ -136,7 +136,16 @@ bool j1Map::Load(const char* file_name)
 
 	// TODO 4: Iterate all layers and load each of them
 	// Load layer info ----------------------------------------------
+	xml_node layers;
+	for (layers = map_file.child("map").child("layer"); layers && ret; layers = layers.next_sibling("layer"))
+	{
+		MapLayer* set = new MapLayer();
 
+		if (ret == true)
+		{
+			ret = LoadLayer(layers, set);
+		}
+	}
 
 	if(ret == true)
 	{
