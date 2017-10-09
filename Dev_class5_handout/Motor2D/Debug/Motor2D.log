@@ -1,2 +1,3 @@
 ﻿  j1Map.cpp
-LINK : fatal error LNK1104: cannot open file 'C:\Users\Ivan\Documents\GitHub\Game-Developement-Projects\Dev_class5_handout\Debug\Motor 2D.exe'
+  Motor2D.vcxproj -> C:\Users\Ivan\Documents\GitHub\Game-Developement-Projects\Dev_class5_handout\Debug\Motor 2D.exe
+  Motor2D.vcxproj -> C:\Users\Ivan\Documents\GitHub\Game-Developement-Projects\Dev_class5_handout\Debug\Motor 2D.pdb (Partial PDB)

@@ -38,9 +38,9 @@ void j1Map::Draw()
 	
 	for (int i = 0; i < data.width; ++i)
 		{
-			for (int j = 0; j < data.height; ++j)
-			{
-				uint id = data.maplayers[0]->Get(i, j);
+		for (int j = 0; j < data.height; ++j)
+		{
+			uint id = data.maplayers[0]->data[data.maplayers[0]->Get(i, j)];
 				if (id != 0)
 				{
 					SDL_Rect tile_rect = data.tilesets[0]->GetTileRect(id);
