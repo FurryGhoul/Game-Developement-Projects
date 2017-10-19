@@ -58,7 +58,7 @@ void j1Map::PropagateBFS()
 	p2List_item<iPoint>* item;
 	for (item = neighbours.start; item; item = item->next)
 	{
-		if (visited.find(item->data) == false && IsWalkable(item->data.x, item->data.y) == true)
+		if (visited.find(item->data) == -1 && IsWalkable(item->data.x, item->data.y) == true)
 		{
 			frontier.Push(item->data);
 			visited.add(item->data);
@@ -111,7 +111,7 @@ bool j1Map::IsWalkable(int x, int y) const
 	{
 		for (item = data.layers.start; item; item = item->next)
 		{
-			if (item->data->name == "Collisions")
+			if (item->data->name == "Colisions")
 			{
 				if (item->data->Get(x,y) == 0)
 				{
