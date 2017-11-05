@@ -1,9 +1,6 @@
 ﻿  j1Map.cpp
-c:\users\ivandv\documents\github\game-developement-projects\dev_class7.8_handout\motor2d\j1map.cpp(299): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\ivandv\documents\github\game-developement-projects\dev_class7.8_handout\motor2d\j1map.cpp(300): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-  Generando código...
-  Omitiendo... (no se detectaron cambios relevantes)
-  j1Scene.cpp
-  j1App.cpp
-  Motor2D.vcxproj -> C:\Users\ivandv\Documents\GitHub\Game-Developement-Projects\Dev_class7.8_handout\Debug\Dev Class7.8 Handout.exe
-  Motor2D.vcxproj -> C:\Users\ivandv\Documents\GitHub\Game-Developement-Projects\Dev_class7.8_handout\Debug\Dev Class7.8 Handout.pdb (Partial PDB)
+c:\users\ivan\documents\github\game-developement-projects\dev_class7.8_handout\motor2d\j1map.cpp(93): warning C4244: 'initializing': conversion from 'double' to 'uint', possible loss of data
+c:\users\ivan\documents\github\game-developement-projects\dev_class7.8_handout\motor2d\j1map.cpp(308): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivan\documents\github\game-developement-projects\dev_class7.8_handout\motor2d\j1map.cpp(309): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Motor2D.vcxproj -> C:\Users\Ivan\Documents\GitHub\Game-Developement-Projects\Dev_class7.8_handout\Debug\Dev Class7.8 Handout.exe
+  Motor2D.vcxproj -> C:\Users\Ivan\Documents\GitHub\Game-Developement-Projects\Dev_class7.8_handout\Debug\Dev Class7.8 Handout.pdb (Partial PDB)

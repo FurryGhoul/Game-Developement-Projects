@@ -136,7 +136,7 @@ public:
 	// Propagation style
 	void PropagateBFS();
 	void PropagateDijkstra();
-	void PropagateA(int x, int y);
+	void PropagateA();
 
 private:
 

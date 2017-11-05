@@ -68,32 +68,40 @@ void j1Map::Path(int x, int y)
 	}
 }
 
-void j1Map::PropagateA(int x,int y)
+void j1Map::PropagateA()
 {
+	int x, y;
+	App->input->GetMousePosition(x, y);
 	iPoint curr;
 	iPoint goal = WorldToMap(x, y);
-	if (frontier.Pop(curr))
+	while (frontier.Count() != 0)
 	{
-		iPoint neighbors[4];
-		neighbors[0].create(curr.x + 1, curr.y + 0);
-		neighbors[1].create(curr.x + 0, curr.y + 1);
-		neighbors[2].create(curr.x - 1, curr.y + 0);
-		neighbors[3].create(curr.x + 0, curr.y - 1);
-
-		for (uint i = 0; i < 4; ++i)
+		if (goal == curr)
 		{
+			break;
+		}
 
-			uint new_cost = cost_so_far[curr.x][curr.y] + MovementCost(neighbors[i].x, neighbors[i].y);
-			uint point_dist = sqrt((goal.x ^ 2 - curr.x ^ 2) + (goal.y ^ 2 - curr.y ^ 2));
+		if (frontier.Pop(curr))
+		{
+			iPoint neighbors[4];
+			neighbors[0].create(curr.x + 1, curr.y + 0);
+			neighbors[1].create(curr.x + 0, curr.y + 1);
+			neighbors[2].create(curr.x - 1, curr.y + 0);
+			neighbors[3].create(curr.x + 0, curr.y - 1);
 
-			if (MovementCost(neighbors[i].x, neighbors[i].y) >= 0)
+			for (uint i = 0; i < 4; ++i)
 			{
-				if (visited.find(neighbors[i]) == -1 /*|| new_cost<MovementCost(neighbors[i].x, neighbors[i].y)*/)
+				uint point_dist =  sqrt(pow((goal.x - curr.x), 2) + pow((goal.y - curr.y), 2));
+
+				if (MovementCost(neighbors[i].x, neighbors[i].y) >= 0)
 				{
-					cost_so_far[neighbors[i].x][neighbors[i].y] = new_cost;
-					frontier.Push(neighbors[i], new_cost);
-					visited.add(neighbors[i]);
-					breadcrumbs.add(curr);
+					if (visited.find(neighbors[i]) == -1)
+					{
+						cost_so_far[neighbors[i].x][neighbors[i].y] = point_dist;
+						frontier.Push(neighbors[i], point_dist);							//El nou cost es la distancia
+						visited.add(neighbors[i]);
+						breadcrumbs.add(curr);
+					}
 				}
 			}
 		}
