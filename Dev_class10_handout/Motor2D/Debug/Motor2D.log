@@ -1,0 +1,8 @@
+﻿  j1App.cpp
+c:\users\clararg1\documents\github\gamedev_handouts\dev_class10_handout\motor2d\j1app.cpp(208): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\clararg1\documents\github\gamedev_handouts\dev_class10_handout\motor2d\j1app.cpp(213): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\clararg1\documents\github\gamedev_handouts\dev_class10_handout\motor2d\j1app.cpp(203): warning C4477: 'sprintf_s' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 5 has type 'uint64'
+  c:\users\clararg1\documents\github\gamedev_handouts\dev_class10_handout\motor2d\j1app.cpp(203): note: consider using '%llu' in the format string
+  c:\users\clararg1\documents\github\gamedev_handouts\dev_class10_handout\motor2d\j1app.cpp(203): note: consider using '%I64u' in the format string
+  Motor2D.vcxproj -> C:\Users\clararg1\Documents\GitHub\GameDev_Handouts\Dev_class10_handout\Debug\Development - Class 10.exe
+  Motor2D.vcxproj -> C:\Users\clararg1\Documents\GitHub\GameDev_Handouts\Dev_class10_handout\Debug\Development - Class 10.pdb (Partial PDB)
