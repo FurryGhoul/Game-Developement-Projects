@@ -1,8 +1,33 @@
-﻿  j1App.cpp
-c:\users\clararg1\documents\github\gamedev_handouts\dev_class10_handout\motor2d\j1app.cpp(208): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\clararg1\documents\github\gamedev_handouts\dev_class10_handout\motor2d\j1app.cpp(213): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\clararg1\documents\github\gamedev_handouts\dev_class10_handout\motor2d\j1app.cpp(203): warning C4477: 'sprintf_s' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 5 has type 'uint64'
-  c:\users\clararg1\documents\github\gamedev_handouts\dev_class10_handout\motor2d\j1app.cpp(203): note: consider using '%llu' in the format string
-  c:\users\clararg1\documents\github\gamedev_handouts\dev_class10_handout\motor2d\j1app.cpp(203): note: consider using '%I64u' in the format string
-  Motor2D.vcxproj -> C:\Users\clararg1\Documents\GitHub\GameDev_Handouts\Dev_class10_handout\Debug\Development - Class 10.exe
-  Motor2D.vcxproj -> C:\Users\clararg1\Documents\GitHub\GameDev_Handouts\Dev_class10_handout\Debug\Development - Class 10.pdb (Partial PDB)
+﻿  pugixml.cpp
+  j1Window.cpp
+  j1Textures.cpp
+  j1Render.cpp
+  p2Log.cpp
+  j1Timer.cpp
+  j1Scene.cpp
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1scene.cpp(90): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1scene.cpp(93): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1scene.cpp(96): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1scene.cpp(99): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+  j1PerfTimer.cpp
+  j1Pathfinding.cpp
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\p2point.h(114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\p2point.h(110): note: while compiling class template member function 'int p2Point<int>::DistanceTo(const p2Point<int> &) const'
+  c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1pathfinding.cpp(160): note: see reference to function template instantiation 'int p2Point<int>::DistanceTo(const p2Point<int> &) const' being compiled
+  c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1pathfinding.h(81): note: see reference to class template instantiation 'p2Point<int>' being compiled
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\p2point.h(114): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  j1Map.cpp
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1map.cpp(106): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1map.cpp(107): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  j1Input.cpp
+  j1Audio.cpp
+  j1App.cpp
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1app.cpp(208): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1app.cpp(213): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1app.cpp(203): warning C4477: 'sprintf_s' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 5 has type 'uint64'
+  c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1app.cpp(203): note: consider using '%llu' in the format string
+  c:\users\ivandv\documents\github\game-developement-projects\dev_class10_handout\motor2d\j1app.cpp(203): note: consider using '%I64u' in the format string
+  j1Main.cpp
+  Generating Code...
+  Motor2D.vcxproj -> C:\Users\ivandv\Documents\GitHub\Game-Developement-Projects\Dev_class10_handout\Debug\Development - Class 10.exe
+  Motor2D.vcxproj -> C:\Users\ivandv\Documents\GitHub\Game-Developement-Projects\Dev_class10_handout\Debug\Development - Class 10.pdb (Partial PDB)
