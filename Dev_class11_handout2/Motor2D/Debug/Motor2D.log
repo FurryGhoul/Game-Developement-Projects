@@ -1,0 +1,38 @@
+﻿  pugixml.cpp
+  j1Window.cpp
+  j1Textures.cpp
+  j1Render.cpp
+  p2Log.cpp
+  j1Timer.cpp
+  j1Scene.cpp
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1scene.cpp(95): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1scene.cpp(98): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1scene.cpp(101): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1scene.cpp(104): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+  j1PerfTimer.cpp
+  j1Pathfinding.cpp
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\p2point.h(114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  c:\users\ivandv\desktop\dev_class11_handout2\motor2d\p2point.h(110): note: while compiling class template member function 'int p2Point<int>::DistanceTo(const p2Point<int> &) const'
+  c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1pathfinding.cpp(160): note: see reference to function template instantiation 'int p2Point<int>::DistanceTo(const p2Point<int> &) const' being compiled
+  c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1pathfinding.h(81): note: see reference to class template instantiation 'p2Point<int>' being compiled
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\p2point.h(114): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  j1Map.cpp
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1map.cpp(106): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1map.cpp(107): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  j1Input.cpp
+  j1Audio.cpp
+  j1App.cpp
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1app.cpp(217): warning C4018: '<': signed/unsigned mismatch
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1app.cpp(213): warning C4477: 'sprintf_s' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 6 has type 'uint64'
+  c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1app.cpp(213): note: consider using '%llu' in the format string
+  c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1app.cpp(213): note: consider using '%I64u' in the format string
+  j1Main.cpp
+  j1Gui.cpp
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\j1gui.cpp(115): warning C4060: switch statement contains no 'case' or 'default' labels
+  j1Fonts.cpp
+  Elements.cpp
+c:\users\ivandv\desktop\dev_class11_handout2\motor2d\elements.cpp(9): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  Background.cpp
+  Generating Code...
+  Motor2D.vcxproj -> C:\Users\ivandv\Desktop\Dev_class11_handout2\Debug\Development - Class 11 Handout2.exe
+  Motor2D.vcxproj -> C:\Users\ivandv\Desktop\Dev_class11_handout2\Debug\Development - Class 11 Handout2.pdb (Partial PDB)
