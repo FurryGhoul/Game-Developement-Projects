@@ -8,6 +8,7 @@
 #include "j1Gui.h"
 #include "j1Collisions.h"
 #include "Elements.h"
+#include "Background.h"
 
 j1Gui::j1Gui() : j1Module()
 {
@@ -44,26 +45,21 @@ bool j1Gui::PreUpdate()
 	{
 		if (queue[i].type != ELEMENT_TYPES::NO_TYPE)
 		{
-			if (queue[i].y * SCREEN_SIZE > App->render->camera.y)
-			{
-
-				LOG("Spawning enemy at %d", queue[i].y* SCREEN_SIZE);
-				SpawnElement(queue[i]);
-				queue[i].type = ELEMENT_TYPES::NO_TYPE;
-
-			}
+			LOG("Spawning enemy at %d", queue[i].y* SCREEN_SIZE);
+			SpawnElement(queue[i]);
+			queue[i].type = ELEMENT_TYPES::NO_TYPE;
 		}
 	}
 	return true;
 }
 
-bool j1Gui::Update()
+bool j1Gui::Update(float dt)
 {
 	for (uint i = 0; i < MAX_ELEMENTS; ++i)
 	{
 		if (elements[i] != nullptr)
 		{
-			
+			elements[i]->Draw(elements[i]->sprites);
 		}
 	}
 
@@ -77,12 +73,9 @@ bool j1Gui::PostUpdate()
 	{
 		if (elements[i] != nullptr)
 		{
-			if ((abs((int)App->render->camera.y) + SCREEN_HEIGHT) < elements[i]->pos.y)
-			{
-				LOG("DeSpawning enemy at %d", elements[i]->pos.y * SCREEN_SIZE);
-				delete elements[i];
-				elements[i] = nullptr;
-			}
+			LOG("DeSpawning enemy at %d", elements[i]->pos.y * SCREEN_SIZE);
+			delete elements[i];
+			elements[i] = nullptr;
 		}
 	}
 	return true;
@@ -112,7 +105,9 @@ void j1Gui::SpawnElement(const ElementInfo& info)
 	{
 		switch (info.type)
 		{
-		
+		case ELEMENT_TYPES::BACKGROUND:
+			elements[i] = new Background(info.x, info.y);
+			break;
 		}
 	}
 }
@@ -137,17 +132,17 @@ bool j1Gui::AddElement(ELEMENT_TYPES type, int x, int y)
 	return ret;
 }
 
-void j1Gui::OnCollision(Collider* c1, Collider* c2)
-{
-
-	for (uint i = 0; i < MAX_ELEMENTS; ++i)
-	{
-		if (elements[i] != nullptr && elements[i]->GetCollider() == c1)
-		{
-			
-		}
-	}
-
-}
+//void j1Gui::OnCollision(Collider* c1, Collider* c2)
+//{
+//
+//	for (uint i = 0; i < MAX_ELEMENTS; ++i)
+//	{
+//		if (elements[i] != nullptr && elements[i]->GetCollider() == c1)
+//		{
+//			
+//		}
+//	}
+//
+//}
 // class Gui ---------------------------------------------------
 

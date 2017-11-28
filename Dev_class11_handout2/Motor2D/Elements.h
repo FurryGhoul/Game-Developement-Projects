@@ -17,7 +17,7 @@ public:
 
 	const Collider* GetCollider() const;
 
-	virtual bool Awake(pugi::xml_node&);
+	//virtual bool Awake(pugi::xml_node&);
 
 	virtual void Draw(SDL_Texture* sprite);
 

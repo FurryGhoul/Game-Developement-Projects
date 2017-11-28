@@ -10,12 +10,12 @@ Elements::Elements(int x, int y) : pos(x, y), original_pos(x, y), collider_pos(0
 
 }
 
-bool Elements::Awake(pugi::xml_node& entity)
-{
-	Awake(entity);
-
-	return true;
-}
+//bool Elements::Awake(pugi::xml_node& entity)
+//{
+//	Awake(entity);
+//
+//	return true;
+//}
 
 Elements::~Elements()
 {
@@ -30,18 +30,14 @@ const Collider* Elements::GetCollider() const
 
 void Elements::Draw(SDL_Texture* sprite)
 {
-
 	if (collider != nullptr)
 	{
 		collider->SetPos(pos.x, pos.y);
 	}
 
-
-	/*for (int i = 0; App->entity_manager->entities[i]; ++i)
-	{
-	App->entity_manager->entities[i]->collider->SetPos(App->entity_manager->entities[i]->pos.x, App->entity_manager->entities[i]->pos.y);
-	App->render->Blit(App->entity_manager->entities[i]->texture, App->entity_manager->entities[i]->pos.x, App->entity_manager->entities[i]->pos.y, 1, 1, false, &App->entity_manager->entities[i]->animation->GetCurrentFrame());
-	}*/
+	SDL_Rect r = { pos.x, pos.y, 1920, 1080 };
+	sprite = sprites;
+	App->render->Blit(sprite, pos.x, pos.y, &r);
 }
 
 void Elements::OnCollision(Collider* collider)

@@ -48,7 +48,7 @@ public:
 	// Called before all Updates
 	bool PreUpdate();
 
-	bool Update();
+	bool Update(float dt);
 
 	// Called after all Updates
 	bool PostUpdate();
@@ -60,7 +60,7 @@ public:
 
 	bool AddElement(ELEMENT_TYPES type, int x, int y);
 
-	void OnCollision(Collider* c1, Collider* c2);
+	//void OnCollision(Collider* c1, Collider* c2);
 	// TODO 2: Create the factory methods
 	// Gui creation functions
 
