@@ -6,9 +6,9 @@
 #include "j1Fonts.h"
 #include "j1Input.h"
 #include "j1Gui.h"
-#include "j1Collisions.h"
 #include "Elements.h"
 #include "Background.h"
+#include "Button.h"
 
 j1Gui::j1Gui() : j1Module()
 {
@@ -35,48 +35,31 @@ bool j1Gui::Start()
 {
 	atlas = App->tex->Load(atlas_file_name.GetString());
 
+	background = App->tex->Load("gui/background.png");
+	button = App->tex->Load("gui/button_panel.png");
+
+	fonts.PushBack(App->font->Load("fonts/wow/ARIALN.ttf", 20));
+
+	font = App->font->Load("fonts/wow/ARIALN.ttf", 20);
 	return true;
 }
 
 // Update all guis
 bool j1Gui::PreUpdate()
 {
-	for (uint i = 0; i < MAX_ELEMENTS; ++i)
-	{
-		if (queue[i].type != ELEMENT_TYPES::NO_TYPE)
-		{
-			LOG("Spawning enemy at %d", queue[i].y* SCREEN_SIZE);
-			SpawnElement(queue[i]);
-			queue[i].type = ELEMENT_TYPES::NO_TYPE;
-		}
-	}
-	return true;
-}
-
-bool j1Gui::Update(float dt)
-{
-	for (uint i = 0; i < MAX_ELEMENTS; ++i)
-	{
-		if (elements[i] != nullptr)
-		{
-			elements[i]->Draw(elements[i]->sprites);
-		}
-	}
-
+	
 	return true;
 }
 
 // Called after all Updates
 bool j1Gui::PostUpdate()
 {
-	for (uint i = 0; i < MAX_ELEMENTS; ++i)
+	p2List_item<Elements*>* element = elements.start;
+	
+	while (element != nullptr)
 	{
-		if (elements[i] != nullptr)
-		{
-			LOG("DeSpawning enemy at %d", elements[i]->pos.y * SCREEN_SIZE);
-			delete elements[i];
-			elements[i] = nullptr;
-		}
+		element->data->Draw();
+		element = element->next;
 	}
 	return true;
 }
@@ -95,54 +78,27 @@ const SDL_Texture* j1Gui::GetAtlas() const
 	return atlas;
 }
 
-void j1Gui::SpawnElement(const ElementInfo& info)
+SDL_Texture* j1Gui::GetBackground() const
 {
-	// find room for the new enemy
-	uint i = 0;
-	for (; elements[i] != nullptr && i < MAX_ELEMENTS; ++i);
-
-	if (i != MAX_ELEMENTS)
-	{
-		switch (info.type)
-		{
-		case ELEMENT_TYPES::BACKGROUND:
-			elements[i] = new Background(info.x, info.y);
-			break;
-		}
-	}
+	return background;
 }
 
-bool j1Gui::AddElement(ELEMENT_TYPES type, int x, int y)
+SDL_Texture* j1Gui::GetButton() const
 {
-	bool ret = false;
-
-	for (uint i = 0; i < MAX_ELEMENTS; ++i)
-	{
-		if (queue[i].type == ELEMENT_TYPES::NO_TYPE)
-		{
-			queue[i].type = type;
-			queue[i].x = x;
-			queue[i].y = y;
-
-			ret = true;
-			break;
-		}
-	}
-
-	return ret;
+	return button;
 }
 
-//void j1Gui::OnCollision(Collider* c1, Collider* c2)
-//{
-//
-//	for (uint i = 0; i < MAX_ELEMENTS; ++i)
-//	{
-//		if (elements[i] != nullptr && elements[i]->GetCollider() == c1)
-//		{
-//			
-//		}
-//	}
-//
-//}
+
+void j1Gui::AddBackground(int x, int y, ELEMENT_TYPES types)
+{
+	Elements* element = new Background(x, y, types);
+	elements.add(element);
+}
+
+void j1Gui::AddButton(int x, int y, ELEMENT_TYPES types, const char* text)
+{
+	Elements* element = new Button(x, y, types, text);
+	elements.add(element);
+}
 // class Gui ---------------------------------------------------
 

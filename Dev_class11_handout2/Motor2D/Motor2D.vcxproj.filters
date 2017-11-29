@@ -58,6 +58,9 @@
     <ClCompile Include="j1Collisions.cpp">
       <Filter>Desenvolupament  ========\Modules</Filter>
     </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Desenvolupament  ========\Elements</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="j1Window.h">
@@ -134,6 +137,9 @@
     </ClInclude>
     <ClInclude Include="j1Collisions.h">
       <Filter>Desenvolupament  ========\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Desenvolupament  ========\Elements</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

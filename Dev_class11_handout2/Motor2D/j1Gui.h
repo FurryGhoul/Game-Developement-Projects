@@ -1,33 +1,28 @@
 #ifndef __j1GUI_H__
 #define __j1GUI_H__
 
+#include "p2List.h"
+#include "p2Log.h"
 #include "j1Module.h"
+#include "p2DynArray.h"
 
-#define SCREEN_SIZE 1
-#define SCREEN_WIDTH 640
-#define SCREEN_HEIGHT 480
 #define CURSOR_WIDTH 2
-#define MAX_ELEMENTS 1000
 
 // TODO 1: Create your structure of classes
-
 enum ELEMENT_TYPES
 {
+	BACKGROUND,
 	TEXT_BOX,
 	BUTTON,
 	IMAGE,
-	BACKGROUND,
 	TEXT,
 	NO_TYPE
 };
 
+class SDL_Texture;
+class SDL_Rect;
 class Elements;
-
-struct ElementInfo
-{
-	ELEMENT_TYPES type = ELEMENT_TYPES::NO_TYPE;
-	int x, y;
-};
+class _TTF_Font;
 
 // ---------------------------------------------------
 class j1Gui : public j1Module
@@ -48,25 +43,26 @@ public:
 	// Called before all Updates
 	bool PreUpdate();
 
-	bool Update(float dt);
-
 	// Called after all Updates
 	bool PostUpdate();
 
 	// Called before quitting
 	bool CleanUp();
 
-	void SpawnElement(const ElementInfo& info);
-
-	bool AddElement(ELEMENT_TYPES type, int x, int y);
-
-	//void OnCollision(Collider* c1, Collider* c2);
 	// TODO 2: Create the factory methods
 	// Gui creation functions
+	void AddBackground(int x, int y, ELEMENT_TYPES types);
+	void AddButton(int x, int y, ELEMENT_TYPES types, const char* text);
 
 	const SDL_Texture* GetAtlas() const;
-	ElementInfo queue[MAX_ELEMENTS];
-	Elements* elements[MAX_ELEMENTS];
+	SDL_Texture* GetBackground() const;
+	SDL_Texture* GetButton() const;
+
+	p2List<Elements*> elements;
+	p2DynArray<_TTF_Font*> fonts;
+	SDL_Texture* background = nullptr;
+	SDL_Texture* button = nullptr;
+	_TTF_Font* font = nullptr;
 
 private:
 

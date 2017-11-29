@@ -45,8 +45,15 @@ bool j1Scene::Start()
 	debug_tex = App->tex->Load("maps/path2.png");
 
 	// TODO 3: Create the banner (rect {485, 829, 328, 103}) and the text "Hello World"
+	App->gui->AddBackground(0, 0, BACKGROUND);
+	App->gui->AddButton(896, 820, BUTTON, "Login");
+	App->gui->AddButton(100, 850, BUTTON, "Manage Account");
+	App->gui->AddButton(100, 900, BUTTON, "Community Site");
 
-	App->gui->AddElement(BACKGROUND, 0, 0);
+	App->gui->AddButton(1590, 750, BUTTON, "Cinematics");
+	App->gui->AddButton(1590, 800, BUTTON, "Credits");
+	App->gui->AddButton(1590, 850, BUTTON, "Terms of Use");
+	App->gui->AddButton(1590, 1000, BUTTON, "Quit");
 
 	return true;
 }

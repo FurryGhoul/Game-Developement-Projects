@@ -1,13 +1,19 @@
+#include "j1App.h"
+#include "j1Render.h"
+#include "j1Gui.h"
 #include "Background.h"
-#include "Elements.h"
 
 
-Background::Background(int x, int y) : Elements(x, y)
+Background::Background(int x, int y, ELEMENT_TYPES types) : Elements(x, y, types)
 {
-	sprites = App->tex->Load("gui/login_background.png");
 }
 
 
 Background::~Background()
 {
+}
+
+void Background::Draw()
+{
+	App->render->Blit(App->gui->GetBackground(), pos.x, pos.y);
 }
