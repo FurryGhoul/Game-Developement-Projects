@@ -100,5 +100,11 @@ void j1Gui::AddButton(int x, int y, ELEMENT_TYPES types, const char* text)
 	Elements* element = new Button(x, y, types, text);
 	elements.add(element);
 }
+
+void j1Gui::AddText(int x, int y, ELEMENT_TYPES types, const char* text)
+{
+	Elements* element = new Text(x, y, types, text);
+	elements.add(element);
+}
 // class Gui ---------------------------------------------------
 

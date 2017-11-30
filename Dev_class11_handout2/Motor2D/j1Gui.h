@@ -53,6 +53,7 @@ public:
 	// Gui creation functions
 	void AddBackground(int x, int y, ELEMENT_TYPES types);
 	void AddButton(int x, int y, ELEMENT_TYPES types, const char* text);
+	void AddText(int x, int y, ELEMENT_TYPES types, const char* text);
 
 	const SDL_Texture* GetAtlas() const;
 	SDL_Texture* GetBackground() const;
