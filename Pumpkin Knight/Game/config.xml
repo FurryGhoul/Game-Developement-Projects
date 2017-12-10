@@ -1,0 +1,68 @@
+<!-- Config file for the game -->
+
+<config>
+  <app framerate_cap = "30">
+    <title>Pumpkin Knight</title>
+    <organization>UPC</organization>
+  </app>
+	
+  <renderer>
+    <vsync value="true"/>
+  </renderer>
+
+  <window>
+    <resolution width="1024" height="768" scale="1"/>
+    <fullscreen value="false"/>
+    <borderless value="false"/>
+    <resizable value="false"/>
+    <fullscreen_window value="false"/>
+  </window>
+
+  <file_system>
+    <path>data.zip</path>
+  </file_system>
+
+  <gui>
+    <atlas file="gui/gui.png"/>
+  </gui>
+
+  <map>
+    <folder>maps/</folder>
+		<map name = "level1_v4.png"/>		
+  </map>
+  
+  <player_data>
+	<velocity value = "200"/>
+	<acceleration x = "200" y ="200" />
+	<pos x = "100" y = "200"/>
+	<gravity value = "250"/>
+	<jump velocity_y = "300" velocity_x = "160" height = "300"/>
+  <scale x="3" y="3"/>
+  </player_data>
+
+  <entities>
+    <wolf>
+      <speed x ="80" y="0" />
+      <move value ="false" />
+      <attack value ="false" />
+      <scale x="2" y="2"/>
+    </wolf>
+
+    <bat>
+      <speed x="80" y="80" />
+      <move value ="false" />
+      <attack value ="false" />
+      <scale x="2" y="2"/>  
+    </bat>
+  
+    <player>
+	    <velocity value = "200"/>
+	    <acceleration x = "200" y ="200" />
+	    <pos x = "100" y = "200"/>
+	    <gravity value = "250"/>
+	    <jump velocity_y = "300" velocity_x = "160" height = "300"/>
+      <scale x="3" y="3"/>
+    </player>
+  </entities>
+
+</config>

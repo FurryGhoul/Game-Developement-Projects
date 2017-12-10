@@ -19,6 +19,14 @@ enum ELEMENT_TYPES
 	NO_TYPE
 };
 
+enum UIEvents
+{
+	MOUSE_ENTER,
+	MOUSE_EXIT,
+	MOUSE_CLICK,
+	MOUSE_STOP_CLICK
+};
+
 class SDL_Texture;
 class SDL_Rect;
 class Elements;
@@ -51,9 +59,12 @@ public:
 
 	// TODO 2: Create the factory methods
 	// Gui creation functions
+	bool MouseCollision(Elements* element);
+
 	void AddBackground(int x, int y, ELEMENT_TYPES types);
 	void AddButton(int x, int y, ELEMENT_TYPES types, const char* text);
 	void AddText(int x, int y, ELEMENT_TYPES types, const char* text);
+	void AddTextBox(int x, int y, ELEMENT_TYPES types, const char* text);
 
 	const SDL_Texture* GetAtlas() const;
 	SDL_Texture* GetBackground() const;
@@ -63,6 +74,7 @@ public:
 	p2DynArray<_TTF_Font*> fonts;
 	SDL_Texture* background = nullptr;
 	SDL_Texture* button = nullptr;
+	SDL_Texture* box = nullptr;
 	_TTF_Font* font = nullptr;
 
 private:

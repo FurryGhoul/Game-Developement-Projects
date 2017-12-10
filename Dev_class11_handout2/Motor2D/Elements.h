@@ -14,8 +14,12 @@ public:
 	virtual void Draw() {};
 
 public:
+	SDL_Rect elemrect;
 
 	fPoint pos;
+
+	uint x_size;
+	uint y_size;
 
 	ELEMENT_TYPES type;
 };

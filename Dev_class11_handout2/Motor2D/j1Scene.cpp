@@ -46,6 +46,12 @@ bool j1Scene::Start()
 
 	// TODO 3: Create the banner (rect {485, 829, 328, 103}) and the text "Hello World"
 	App->gui->AddBackground(0, 0, BACKGROUND);
+	App->gui->AddText(896, 570, TEXT, "Account Name");
+	App->gui->AddTextBox(896, 600, TEXT_BOX, "mail");
+
+	App->gui->AddText(896, 700, TEXT, "Account Password");
+	App->gui->AddTextBox(896, 725, TEXT_BOX, "pasword");
+
 	App->gui->AddButton(896, 820, BUTTON, "Login");
 	App->gui->AddButton(100, 850, BUTTON, "Manage Account");
 	App->gui->AddButton(100, 900, BUTTON, "Community Site");
@@ -148,12 +154,11 @@ bool j1Scene::Update(float dt)
 // Called each loop iteration
 bool j1Scene::PostUpdate()
 {
-	bool ret = true;
 
 	if(App->input->GetKey(SDL_SCANCODE_ESCAPE) == KEY_DOWN)
-		ret = false;
+		exit = false;
 
-	return ret;
+	return exit;
 }
 
 // Called before quitting

@@ -26,7 +26,7 @@ Button::~Button()
 
 void Button::Draw()
 {
-	App->render->Blit(ButtonBox, pos.x , pos.y );
-	App->render->Blit(ButtonText, pos.x + x_size/4, pos.y + y_size/4);
+	App->render->Blit(ButtonBox, pos.x , pos.y, 2.0f);
+	App->render->Blit(ButtonText, pos.x + x_size / 2, pos.y + y_size / 2);
 
 }

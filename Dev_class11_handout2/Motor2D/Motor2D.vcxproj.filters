@@ -64,6 +64,9 @@
     <ClCompile Include="Text.cpp">
       <Filter>Desenvolupament  ========\Elements</Filter>
     </ClCompile>
+    <ClCompile Include="Text_Box.cpp">
+      <Filter>Desenvolupament  ========\Elements</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="j1Window.h">
@@ -145,6 +148,9 @@
       <Filter>Desenvolupament  ========\Elements</Filter>
     </ClInclude>
     <ClInclude Include="Text.h">
+      <Filter>Desenvolupament  ========\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Text_Box.h">
       <Filter>Desenvolupament  ========\Elements</Filter>
     </ClInclude>
   </ItemGroup>

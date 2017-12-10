@@ -1,10 +1,19 @@
-﻿  Text.cpp
-c:\users\ivandv\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1gui.h(22): warning C4099: 'SDL_Texture': type name first seen using 'struct' now seen using 'class'
-  c:\users\ivandv\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1fonts.h(10): note: see declaration of 'SDL_Texture'
-c:\users\ivandv\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1gui.h(23): warning C4099: 'SDL_Rect': type name first seen using 'struct' now seen using 'class'
-  c:\users\ivandv\documents\github\game-developement-projects\dev_class11_handout2\motor2d\sdl\include\sdl_rect.h(65): note: see declaration of 'SDL_Rect'
-c:\users\ivandv\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1gui.h(25): warning C4099: '_TTF_Font': type name first seen using 'struct' now seen using 'class'
-  c:\users\ivandv\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1fonts.h(11): note: see declaration of '_TTF_Font'
-c:\users\ivandv\documents\github\game-developement-projects\dev_class11_handout2\motor2d\text.cpp(27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Motor2D.vcxproj -> C:\Users\ivandv\Documents\GitHub\Game-Developement-Projects\Dev_class11_handout2\Debug\Development - Class 11 Handout2.exe
-  Motor2D.vcxproj -> C:\Users\ivandv\Documents\GitHub\Game-Developement-Projects\Dev_class11_handout2\Debug\Development - Class 11 Handout2.pdb (Partial PDB)
+﻿  j1Gui.cpp
+c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1gui.h(22): warning C4099: 'SDL_Texture': type name first seen using 'struct' now seen using 'class'
+  c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1fonts.h(10): note: see declaration of 'SDL_Texture'
+c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1gui.h(23): warning C4099: 'SDL_Rect': type name first seen using 'struct' now seen using 'class'
+  c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1input.h(10): note: see declaration of 'SDL_Rect'
+c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1gui.h(25): warning C4099: '_TTF_Font': type name first seen using 'struct' now seen using 'class'
+  c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1fonts.h(11): note: see declaration of '_TTF_Font'
+  Text_Box.cpp
+c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1gui.h(22): warning C4099: 'SDL_Texture': type name first seen using 'struct' now seen using 'class'
+  c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1fonts.h(10): note: see declaration of 'SDL_Texture'
+c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1gui.h(23): warning C4099: 'SDL_Rect': type name first seen using 'struct' now seen using 'class'
+  c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1input.h(10): note: see declaration of 'SDL_Rect'
+c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1gui.h(25): warning C4099: '_TTF_Font': type name first seen using 'struct' now seen using 'class'
+  c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\j1fonts.h(11): note: see declaration of '_TTF_Font'
+c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\text_box.cpp(30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\ivan\documents\github\game-developement-projects\dev_class11_handout2\motor2d\text_box.cpp(33): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Motor2D.vcxproj -> C:\Users\Ivan\Documents\GitHub\Game-Developement-Projects\Dev_class11_handout2\Debug\Development - Class 11 Handout2.exe
+  Motor2D.vcxproj -> C:\Users\Ivan\Documents\GitHub\Game-Developement-Projects\Dev_class11_handout2\Debug\Development - Class 11 Handout2.pdb (Partial PDB)

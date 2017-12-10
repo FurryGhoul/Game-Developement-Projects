@@ -9,6 +9,8 @@
 #include "Elements.h"
 #include "Background.h"
 #include "Button.h"
+#include "Text.h"
+#include "Text_Box.h"
 
 j1Gui::j1Gui() : j1Module()
 {
@@ -37,6 +39,7 @@ bool j1Gui::Start()
 
 	background = App->tex->Load("gui/background.png");
 	button = App->tex->Load("gui/button_panel.png");
+	box = App->tex->Load("gui/text_box.png");
 
 	fonts.PushBack(App->font->Load("fonts/wow/ARIALN.ttf", 20));
 
@@ -59,6 +62,10 @@ bool j1Gui::PostUpdate()
 	while (element != nullptr)
 	{
 		element->data->Draw();
+		if (MouseCollision(element->data))
+		{
+
+		}
 		element = element->next;
 	}
 	return true;
@@ -105,6 +112,27 @@ void j1Gui::AddText(int x, int y, ELEMENT_TYPES types, const char* text)
 {
 	Elements* element = new Text(x, y, types, text);
 	elements.add(element);
+}
+
+void j1Gui::AddTextBox(int x, int y, ELEMENT_TYPES types, const char* text)
+{
+	Elements* element = new Text_Box(x, y, types, text);
+	elements.add(element);
+}
+
+bool j1Gui::MouseCollision(Elements* element)
+{
+	bool ret = false;
+	int x, y;
+
+	App->input->GetMousePosition(x, y);
+
+	if (x > element->pos.x && x < element->pos.x + element->x_size && y > element->pos.y && y < element->pos.y + element->y_size)
+	{
+		ret = true;
+	}
+
+	return ret;
 }
 // class Gui ---------------------------------------------------
 
