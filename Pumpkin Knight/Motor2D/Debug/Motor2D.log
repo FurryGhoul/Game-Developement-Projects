@@ -1,13 +1,12 @@
 ﻿  j1Scene.cpp
-c:\users\ivandv\documents\github\game-developement-projects\pumpkin knight\motor2d\path.h(60): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
-c:\users\ivandv\documents\github\game-developement-projects\pumpkin knight\motor2d\path.h(66): warning C4018: '<': signed/unsigned mismatch
-c:\users\ivandv\documents\github\game-developement-projects\pumpkin knight\motor2d\path.h(70): warning C4018: '>=': signed/unsigned mismatch
-c:\users\ivandv\documents\github\game-developement-projects\pumpkin knight\motor2d\j1map.h(16): warning C4005: 'COST_MAP': macro redefinition
-  c:\users\ivandv\documents\github\game-developement-projects\pumpkin knight\motor2d\j1pathfinding.h(16): note: see previous definition of 'COST_MAP'
-c:\users\ivandv\documents\github\game-developement-projects\pumpkin knight\motor2d\j1scene.cpp(90): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-c:\users\ivandv\documents\github\game-developement-projects\pumpkin knight\motor2d\j1scene.cpp(93): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
-c:\users\ivandv\documents\github\game-developement-projects\pumpkin knight\motor2d\j1scene.cpp(96): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-c:\users\ivandv\documents\github\game-developement-projects\pumpkin knight\motor2d\j1scene.cpp(99): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
-c:\users\ivandv\documents\github\game-developement-projects\pumpkin knight\motor2d\j1scene.cpp(192): warning C4060: switch statement contains no 'case' or 'default' labels
-  Motor2D.vcxproj -> C:\Users\ivandv\Documents\GitHub\Game-Developement-Projects\Pumpkin Knight\Debug\Motor 2D.exe
-  Motor2D.vcxproj -> C:\Users\ivandv\Documents\GitHub\Game-Developement-Projects\Pumpkin Knight\Debug\Motor 2D.pdb (Partial PDB)
+c:\users\ivan\documents\github\game-developement-projects\pumpkin knight\motor2d\path.h(60): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+c:\users\ivan\documents\github\game-developement-projects\pumpkin knight\motor2d\path.h(66): warning C4018: '<': signed/unsigned mismatch
+c:\users\ivan\documents\github\game-developement-projects\pumpkin knight\motor2d\path.h(70): warning C4018: '>=': signed/unsigned mismatch
+c:\users\ivan\documents\github\game-developement-projects\pumpkin knight\motor2d\j1map.h(16): warning C4005: 'COST_MAP': macro redefinition
+  c:\users\ivan\documents\github\game-developement-projects\pumpkin knight\motor2d\j1pathfinding.h(16): note: see previous definition of 'COST_MAP'
+c:\users\ivan\documents\github\game-developement-projects\pumpkin knight\motor2d\j1scene.cpp(110): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivan\documents\github\game-developement-projects\pumpkin knight\motor2d\j1scene.cpp(113): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivan\documents\github\game-developement-projects\pumpkin knight\motor2d\j1scene.cpp(116): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+c:\users\ivan\documents\github\game-developement-projects\pumpkin knight\motor2d\j1scene.cpp(119): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+  Motor2D.vcxproj -> C:\Users\Ivan\Documents\GitHub\Game-Developement-Projects\Pumpkin Knight\Debug\Motor 2D.exe
+  Motor2D.vcxproj -> C:\Users\Ivan\Documents\GitHub\Game-Developement-Projects\Pumpkin Knight\Debug\Motor 2D.pdb (Partial PDB)

@@ -29,6 +29,8 @@ public:
 	bool mouse_in = false;
 	bool mouse_out = false;
 
+	SDL_Rect element_rect;
+
 };
 
 #endif // !__ELEMENT_H__

@@ -8,7 +8,7 @@
 class Window : public Element
 {
 public:
-	Window(int x, int y, ElementType type, SDL_Rect rec);
+	Window(int x, int y, ElementType type, SDL_Rect* rec);
 
 	void LinkElement(Element* elem);
 	void Draw();
@@ -16,7 +16,7 @@ public:
 	~Window();
 
 private:
-	SDL_Rect rec;
+	SDL_Rect* rec;
 	SDL_Texture* tex = nullptr;
 	p2List<Element*> linked_elements;
 };
