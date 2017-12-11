@@ -11,6 +11,7 @@
 #include "j1Pathfinding.h"
 #include "j1EntityManager.h"
 #include "Element.h"
+#include "Button.h"
 #include "j1Gui.h"
 #include "Brofiler\Brofiler.h"
 
@@ -44,16 +45,9 @@ bool j1Scene::Start()
 	if (start)
 	{
 		rect_start = { 102, 3151, 365, 185 };
-		QuitButton = App->gui->AddButton(400, 400, BUTTON, &rect_start, "");
-		App->gui->AddBackground(-500, 180, BACKGROUND, {0,0,1024,768 });
+		QuitButton = App->gui->AddButton(0, 0, BUTTON, &rect_start);
+		//App->gui->AddBackground(-500, 180, BACKGROUND, {0,0,1024,768 });
 		App->audio->PlayMusic("audio/music/Spooky Scary Skeletons.ogg");
-
-	}
-
-	if (main_menu)
-	{
-		rect_start = { 102, 3151, 365, 185};
-		QuitButton = App->gui->AddButton(400, 400, BUTTON, &rect_start, "");
 	}
 
 	if (level1) 

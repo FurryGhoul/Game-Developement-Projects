@@ -64,7 +64,7 @@ public:
 	//void MouseEvent(Element* element);
 
 	void AddBackground(int x, int y, ElementType type, SDL_Rect rec);
-	Element* AddButton(int x, int y, ElementType type, SDL_Rect* TexRect, const char* text);
+	Element* AddButton(int x, int y, ElementType type, SDL_Rect* TexRect, const char* text = nullptr);
 	Element* AddText(int x, int y, ElementType type, const char* text);
 	Element* AddWindow(int x, int y, ElementType type, SDL_Rect rec);
 
